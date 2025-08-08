@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matriks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Matriks</h1>
+        
+        <div class="controls">
+            <div class="matrix-size">
+                <label>Baris: </label>
+                <input type="number" id="rows" min="1" max="5" value="2">
+                <label>Kolom: </label>
+                <input type="number" id="cols" min="1" max="5" value="2">
+                <button onclick="updateMatrixSize()">Update Ukuran</button>
+            </div>
+            
+            <div class="operation-buttons">
+                <button onclick="performOperation('add')">Penjumlahan</button>
+                <button onclick="performOperation('subtract')">Pengurangan</button>
+                <button onclick="performOperation('multiply')">Perkalian</button>
+                <button onclick="performOperation('transpose')">Transpose</button>
+                <button onclick="performOperation('determinant')">Determinan</button>
+                <button onclick="performOperation('inverse')">Invers</button>
+                <button onclick="clearAll()">Clear</button>
+            </div>
+        </div>
+
+        <div class="matrices-container">
+            <div class="matrix-section">
+                <h3>Matriks A</h3>
+                <div id="matrixA" class="matrix-input"></div>
+            </div>
+            
+            <div class="matrix-section">
+                <h3>Matriks B</h3>
+                <div id="matrixB" class="matrix-input"></div>
+            </div>
+        </div>
+
+        <div class="result-section">
+            <h3>Hasil</h3>
+            <div id="result" class="matrix-result"></div>
+            <div id="error" class="error-message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
